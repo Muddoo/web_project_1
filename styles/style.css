@@ -28,6 +28,7 @@
   position: relative;
   background-color: var(--grey);
   z-index: 0;
+  overflow: hidden;
 }
 
 .logo_place_header {
@@ -61,10 +62,11 @@
   display: block;
   text-decoration: none;
   color: var(--blue);
+  transition: all .5s;
 }
 
 .header__link:hover {
-  color: yellowgreen;
+  opacity: .6;
 }
 
 .header__main-illustration {
@@ -84,15 +86,28 @@
   right: 0;
   z-index: -2;
   background-color: var(--blue);
+  transform: rotate(-15deg);
+  --deg: -15deg;
+  animation: rotation 20s linear infinite;
+}
+
+@keyframes rotation {
+    to {
+      transform: rotate(calc(360deg + var(--deg)));
+    }
 }
 
 /* description section */
+
+.description {
+  margin: 100px auto;
+}
 
 .two-columns {
   display: flex;
   justify-content: space-between;
   width: 80%;
-  margin: 100px auto;
+  margin: 0 auto;
 }
 
 .two-columns__brief {
@@ -123,6 +138,70 @@
 .two-columns__span-accent {
   font-weight: bold;
 }
+
+/* techniques section */
+
+.techniques {
+  margin: 100px auto;
+}
+
+.cards {
+  width: 920px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 60px;
+  column-gap: 100px;
+}
+
+.cards__item {
+  flex-basis: 0;
+  max-width: 240px;
+  flex-grow: 1;
+}
+
+.cards__image {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin: 60px 40px 43px;
+  object-fit: cover;
+}
+
+.cards__title {
+  margin: 0 0 16px;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.cards__description {
+  line-height: 23px;
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+  margin: 0;
+}
+
+/* video block */
+
+.video__iframes {
+  display: flex;
+  margin: 50px auto -60px;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+/* oakley */
+
+.oakley {
+  padding-top: 160px;
+  background-color: var(--grey);
+}
+
 
 /* digits section */
 
@@ -191,7 +270,7 @@
 .feynman__title {
   max-width: 775px;
   margin: auto;
-  padding: 100px 0 70px;
+  padding: 80px 0 70px;
   text-align: center;
   line-height: 1.15;
   font-size: 120px;
@@ -218,6 +297,79 @@
   font-size: 36px;
   font-weight: normal;
   color: var(--dark);
+  transition: all .5s;
+}
+
+.feynman__link:hover {
+  opacity: .6;
+}
+
+/* khan */
+
+.khan {
+  background-color: var(--grey);
+  padding-top: 105px;
+}
+
+.khan__container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.khan__author {
+  margin: 0;
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+}
+
+.khan__title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.khan__quote {
+  max-width: 790px;
+  margin: 50px 0 36px;
+  line-height: 34px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.khan__quote-author {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.khan__quote-author-subline {
+  margin: 10px 0 68px;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.khan__book-container {
+  display: flex;
+  column-gap: 48px;
+}
+
+.khan__book-pic {
+  width: 620px;
+  height: 608px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.khan__buy-link {
+  text-decoration: none;
+  color: var(--blue);
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
 }
 
 /* kaufman section */
@@ -248,6 +400,26 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   z-index: -1;
+  --deg: 0deg;
+  animation: rotation 20s linear infinite;
+}
+
+/* resources */
+
+.resources {
+  padding: 100px 0 217px;
+}
+
+.resources__logo-zone {
+  width: 1100px;
+  margin: 80px auto 0;
+  display: flex;
+  justify-content: center;
+}
+
+.resources__logo {
+  width: 270px;
+  height: 38px;
 }
 
 /* footer section*/
@@ -311,10 +483,11 @@
 .footer__link {
   text-decoration: none;
   color: var(--darkgrey);
+  transition: all .5s;
 }
 
 .footer__link:hover {
-  color: var(--white);
+  opacity: .6;
 }
 
 .footer__social-icon {
