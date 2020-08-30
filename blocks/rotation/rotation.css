@@ -1,0 +1,5 @@
+@keyframes rotation {
+    to {
+      transform: rotate(calc(360deg + var(--deg)));
+    }
+}
