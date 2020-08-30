@@ -8,5 +8,4 @@
     background-color: var(--blue);
     transform: rotate(-15deg);
     --deg: -15deg;
-    animation: rotation 20s linear infinite;
 }
