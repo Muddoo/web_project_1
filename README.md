@@ -5,7 +5,9 @@
 
 Creating modern webpage using html & css.
 
-[Picture](https://zoddoo.tinytake.com/tt/NDU4MjUxMV8xNDUyNDcxOQ)
+### [Page](https://muddoo.github.io/web_project_1/)
+
+### [Picture](https://zoddoo.tinytake.com/tt/NDU4MjUxMV8xNDUyNDcxOQ)
 
 ## Contents
 
